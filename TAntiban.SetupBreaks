@@ -602,7 +602,7 @@ begin
 
   // TAntiban.AddBreak(MinInterval, MaxInterval, MinLength, MaxLength, Randomness: Double = 0.2; LogoutChance: Double = 0.50)
   // Add a break every 9-29 minutes, with length of 1-3 minutes, MaxInterval Randomness scaling 100%, MaxLength Randomness Scaling 100%, and 85% chance of logging out
-  Self.AddBreak(RandomRange(1, 2) * ONE_MINUTE, RandomRange(1, 2) * ONE_MINUTE, 0.2, 0.2, 0.50);
+  Self.AddBreak(RandomRange(1, 2) * ONE_MINUTE, RandomRange(1, 3) * ONE_MINUTE, 1, 1, 0.85);
 
   Self.OnBreaking := @OnBreakingTask;
 end;
